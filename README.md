@@ -26,25 +26,26 @@ Who uses it
 Usage
 ---------
 
-### Adding the depencency
+### 1. Adding the depencency
 
 Add this to your root *build.gradle* file:
 
-```groovy
-allprojects {
-    repositories {
-        ...
-        maven { url 'https://jitpack.io' }
+    ```groovy
+    allprojects {
+        repositories {
+            ...
+            maven { url 'https://jitpack.io' }
+        }
     }
-}
-```
+    ```
 
-Now add the dependency to your app build.gradle file:
+    Now add the dependency to your app build.gradle file:
 
-```groovy
-implementation 'com.github.marcoscgdev:Android-Week-View:1.2.7'
-```
-2. Add WeekView in your xml layout.
+    ```groovy
+    implementation 'com.github.marcoscgdev:Android-Week-View:1.2.7'
+    ```
+    
+### 2. Add WeekView in your xml layout.
 
     ```xml
     <com.alamkanak.weekview.WeekView
@@ -64,7 +65,7 @@ implementation 'com.github.marcoscgdev:Android-Week-View:1.2.7'
             app:todayBackgroundColor="#1848adff"
             app:headerColumnBackground="#ffffffff"/>
     ```
-3. Write the following code in your java file.
+### 3. Write the following code in your java file.
 
     ```java
     // Get a reference for the week view in the layout.
@@ -80,9 +81,9 @@ implementation 'com.github.marcoscgdev:Android-Week-View:1.2.7'
     // Set long press listener for events.
     mWeekView.setEventLongPressListener(mEventLongPressListener);
     ```
-4. Implement `WeekView.MonthChangeListener`, `WeekView.EventClickListener`, `WeekView.EventLongPressListener` according to your need.
+### 4. Implement `WeekView.MonthChangeListener`, `WeekView.EventClickListener`, `WeekView.EventLongPressListener` according to your need.
 
-5. Provide the events for the `WeekView` in `WeekView.MonthChangeListener.onMonthChange()` callback. Please remember that the calendar pre-loads events of three consecutive months to enable lag-free scrolling.
+### 5. Provide the events for the `WeekView` in `WeekView.MonthChangeListener.onMonthChange()` callback. Please remember that the calendar pre-loads events of three consecutive months to enable lag-free scrolling.
 
     ```java
     MonthLoader.MonthChangeListener mMonthChangeListener = new MonthLoader.MonthChangeListener() {
