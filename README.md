@@ -26,10 +26,9 @@ Who uses it
 Usage
 ---------
 
-### 1. Adding the depencency
-
-Add this to your root *build.gradle* file:
-
+1. Import the library into your project.
+  * Add this to your root *build.gradle* file:
+  
     ```groovy
     allprojects {
         repositories {
@@ -38,14 +37,12 @@ Add this to your root *build.gradle* file:
         }
     }
     ```
-
-    Now add the dependency to your app build.gradle file:
-
+  * Now add the dependency to your app build.gradle file:
+  
     ```groovy
     implementation 'com.github.marcoscgdev:Android-Week-View:1.2.7'
     ```
-    
-### 2. Add WeekView in your xml layout.
+2. Add WeekView in your xml layout.
 
     ```xml
     <com.alamkanak.weekview.WeekView
@@ -65,7 +62,7 @@ Add this to your root *build.gradle* file:
             app:todayBackgroundColor="#1848adff"
             app:headerColumnBackground="#ffffffff"/>
     ```
-### 3. Write the following code in your java file.
+3. Write the following code in your java file.
 
     ```java
     // Get a reference for the week view in the layout.
@@ -81,9 +78,9 @@ Add this to your root *build.gradle* file:
     // Set long press listener for events.
     mWeekView.setEventLongPressListener(mEventLongPressListener);
     ```
-### 4. Implement `WeekView.MonthChangeListener`, `WeekView.EventClickListener`, `WeekView.EventLongPressListener` according to your need.
+4. Implement `WeekView.MonthChangeListener`, `WeekView.EventClickListener`, `WeekView.EventLongPressListener` according to your need.
 
-### 5. Provide the events for the `WeekView` in `WeekView.MonthChangeListener.onMonthChange()` callback. Please remember that the calendar pre-loads events of three consecutive months to enable lag-free scrolling.
+5. Provide the events for the `WeekView` in `WeekView.MonthChangeListener.onMonthChange()` callback. Please remember that the calendar pre-loads events of three consecutive months to enable lag-free scrolling.
 
     ```java
     MonthLoader.MonthChangeListener mMonthChangeListener = new MonthLoader.MonthChangeListener() {
@@ -161,6 +158,10 @@ To do
 
 Changelog
 ---------
+
+**Version 1.2.7**
+
+* API 28 compatibility fixed (by @MarcosCGdev)
 
 **Version 1.2.6**
 
