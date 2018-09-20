@@ -26,22 +26,24 @@ Who uses it
 Usage
 ---------
 
-1. Import the library into your project.
-  * Grab via maven
-  
-    ```xml
-    <dependency>
-      <groupId>com.github.alamkanak</groupId>
-      <artifactId>android-week-view</artifactId>
-      <version>1.2.6</version>
-      <type>aar</type>
-    </dependency>
-    ```
-  * Grab via gradle
-  
-    ```groovy
-    compile 'com.github.alamkanak:android-week-view:1.2.6'
-    ```
+### Adding the depencency
+
+Add this to your root *build.gradle* file:
+
+```groovy
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+Now add the dependency to your app build.gradle file:
+
+```groovy
+implementation 'com.github.marcoscgdev:Android-Week-View:1.2.7'
+```
 2. Add WeekView in your xml layout.
 
     ```xml
